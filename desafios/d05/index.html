@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 05</title>
+     <style>
+        body{
+            font: normal 16pt Arial;
+        }
+
+        input{
+            padding: 20px;
+            font: normal 16pt Arial;
+        }
+    </style>
 </head>
 <body>
-    
+     <h1>Conversor de moedas</h1>
+    <input type="button" value="Converter">
+    <p>Clique no botão acima para iniciar.</p>
+    <script>
+        var btn = document.querySelector('input[type=button]')
+        btn.addEventListener('click', converter)
+       
+        
+        function converter(){
+            var metros = window.prompt('Digite uma distância em metros (m)')
+            var m = Number(metros)
+                    var km = m / 1000                                                                                        
+                    var hm = m / 100
+                    var dam = m / 10
+                    var dm = m * 10
+                    var cm = m * 100
+                    var mm = m * 1000
+                    var res = document.querySelector('p')
+                    res.innerHTML = `<h1>A distancia de ${m} metros corresponde a...</h1>`
+                    res.innerHTML += `<p>${km} quilômetros (km)</p>`
+                    res.innerHTML += `<p>${hm} hectômetros (hm)</p>`
+                    res.innerHTML += `<p>${dam} decâmetros (dam)</p>`
+                    res.innerHTML += `<p>${dm} decímetros (dm)</p>`
+                    res.innerHTML += `<p>${cm} centímetros (cm)</p>`
+                    res.innerHTML += `<p>${mm} milímetros (mm)</p>`
+                    
+        }
+        
+    </script>
 </body>
 </html>
