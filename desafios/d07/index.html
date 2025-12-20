@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando o hover</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            color: black;
+            font-size: 2em;
+        }
+
+        div{
+            background-color: grey;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: relative;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        ul{
+            position: absolute;
+            background-color: rgba(3, 121, 81, 0.466);
+            top: 50%;
+            left: 50%;
+            transform: translate(-20%, -1%);
+                                                                                                                                                                                                                                                                   
+        }
+
+        ul > li{
+            list-style-type: none;
+            display: none ;
+        }
+
+    
+
+        div:hover > ul > li{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <ul>
+        <li><a href="www.google.com" target="_blank">Home</a></li>
+        <li>Sobre nós</li>
+        <li>Ser colaborador</li>
+        <li>Contacto</li>
+    </ul>
+    </div>
+    
+</body>
+</html>
